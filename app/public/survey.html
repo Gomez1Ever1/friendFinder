@@ -21,10 +21,13 @@
         <form>
             <div class="row">
                 <div class="col-lg-6">
-                    <input type="text" class="form-control" id="nameBox" placeholder="First name">
+                    <input type="text" class="form-control textBox" id="nameBox" placeholder="First name">
                 </div>
                 <div class="col-lg-6">
-                    <input type="text" class="form-control" id="lastNameBox" placeholder="Last name">
+                    <input type="text" class="form-control textBox" id="lastNameBox" placeholder="Last name">
+                </div>
+                <div class="col-lg-12">
+                    <input type="text" class="form-control textBox" id="imgBox" placeholder="Upload Your Image Here!">
                 </div>
             </div>
         </form>
@@ -270,8 +273,26 @@
             </div>
         </form>
         <hr>
-        <button type="button" class="btn btn-primary" id="submitBtn">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#response" id="submitBtn">
             Submit Your Answers!</button>
+        <div class="modal fade" id="response" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Your Match!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body img-fluid" id="modalBody">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script type="text/javascript" src="public/script.js"></script>
 </body>
